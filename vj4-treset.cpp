@@ -15,6 +15,7 @@ vector<vector<int>> deck::podijeli()
 
         }
         ruka.push_back(mac[index]);
+        
         mac.erase(mac.begin()+index);
     }
     return ruka;
@@ -65,16 +66,22 @@ int igrac::get_bodove()
     {
         if (ruka[i][1] == 1)
             asi++;
+        
         if (ruka[i][1] == 2)
             duje++;
+        
         if (ruka[i][1] == 3)
             trice++;
+        
         if (ruka[i][1] < 4 && ruka[i][0] == 0)
             napolitana1++;
+        
         if (ruka[i][1] < 4 && ruka[i][0] == 1)
             napolitana2++;
+        
         if (ruka[i][1] < 4 && ruka[i][0] == 2)
             napolitana3++;
+        
         if (ruka[i][1] < 4 && ruka[i][0] == 3)
             napolitana4++;
 
@@ -82,18 +89,25 @@ int igrac::get_bodove()
     }
     if (napolitana1 > 2)
         broj_bodova += napolitana1;
+    
     if (napolitana2 > 2)
         broj_bodova += napolitana2;
+    
     if (napolitana3 > 2)
         broj_bodova += napolitana3;
+    
     if (napolitana4 > 2)
         broj_bodova += napolitana4;
+    
     if (asi > 2)
         broj_bodova += asi;
+    
     if (duje > 2)
         broj_bodova += duje;
+    
     if (trice > 2)
         broj_bodova += trice;
+    
 
     return broj_bodova;
 }
