@@ -39,6 +39,7 @@ void deck::izmjesaj()
 void igrac::postavi_ime(string ime)
 {
     ime_igraca;
+    
 }
 
 
